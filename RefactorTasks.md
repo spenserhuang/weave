@@ -3,10 +3,10 @@ Refactor List
   x Gems
   x Markdowns
   x Environment
-    Migrations
-    Models
+  x Migrations
+  x Models
     Seed File
-    User Authentication
+  x User Authentication
 
     Controllers
     Views
