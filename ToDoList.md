@@ -6,7 +6,7 @@ To Do List
 
     Day href
     Seed holidays
-    Add event types
+  x Add event types
     Event bar
     Sign in and sign up JQuery and AJAX
     Redesign wireframes
@@ -37,7 +37,7 @@ APIs
 
 
 Bonus
-    Password Digest
+  x Password Digest
     Partials Refactor
     Refactor All
     Prefilled Date and Time
