@@ -5,15 +5,16 @@
   <h5 id="index-page-subtitle">Interweaving your social and productive lives</h5>
 </div>
 
-<a href='/auth/twitter'><button id="twitter-sign-in">Sign in with Twitter</button></a>
-
-<a href='/auth/facebook'><button id="facebook-sign-in">Sign in with Facebook</button></a>
-
-<div>
+<div id="traditional-sign-in">
   <form action="/sign_in" method="POST" class="authentication" id="sign-in-form">
+    <h3>Sign In</h3>
     <p><input type="text" name="user[username]" placeholder="Enter Username"></p>
     <p><input type="password" name="user[password]" placeholder="Enter Password"></p>
     <input type="submit" class="authentication-submission" id="sign-in-submission">
   </form>
 </div>
 
+<div id="oauth-sign-in">
+  <a href='/auth/twitter'><img src="/images/twitter.png"></a>
+  <a href='/auth/facebook'><img src="/images/facebook.png"></a>
+</div>

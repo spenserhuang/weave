@@ -5,3 +5,59 @@
 .menu-items {
   display: none;
 }
+
+#traditional-sign-up {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#traditional-sign-up h3 {
+  font-size: 3.5em;
+  font-weight: 300;
+  margin-bottom: 1.5%;
+  margin-top: 2.5%;
+}
+
+#traditional-sign-up input[type="text"] {
+  border-radius: 5px;
+  width: 200px;
+  height: 35px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+#traditional-sign-up input[type="password"] {
+  border-radius: 5px;
+  width: 200px;
+  height: 35px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+#traditional-sign-up input[type="submit"] {
+  border-radius: 5px;
+  margin-top: 0px;
+  width: 135px;
+  height: 50px;
+  font-size: 1.3em;
+  text-align: center;
+  background-color: transparent;
+  font-weight: 400;
+  margin-top: 0.3%;
+  border: solid outset;
+  margin-bottom: 3%;
+}
+
+#oauth-sign-up {
+  text-align: center;
+}
+
+#oauth-sign-up h3 {
+  font-size: 2em;
+  font-weight: 300;
+}
+
+#oauth-sign-up img {
+  width: 75px;
+  height: 75px;
+}

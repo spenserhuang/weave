@@ -2,24 +2,23 @@
 
 <div id="separation"></div>
 
-<h2 class='new-event-header'>Create New Event</h2>
-
-<div id="new-event-div">
+<div id="modify-event-div">
+  <h2 class='new-event-header'>Create New Event</h2>
   <form action="/events" method="post" class='new-event' id='new-event-submission-form'>
-      Event Title: <br><input type="text" name="title"><br><br>
-      Event Description: <br><textarea name="description"></textarea><br><br>
-      Event Type: <br><select name="event_type">
+      <p>Event Title: </p><input type="text" name="title"><br>
+      <p>Event Description: </p><textarea name="description"></textarea><br>
+      <p>Event Type: </p><select name="event_type">
         <option selected></option>
         <option value="Work">Work</option>
         <option value="Social">Social</option>
-                  </select><br><br>
-      Event Street: <br><input type="text" name="event_street"><br><br>
-      Event City: <br><input type="text" name="event_city"><br><br>
-      Event State: <br><input type="text" name="event_state"><br><br>
-      Event Zip Code: <br><input type="text" name="event_zip_code"><br><br>
-      Event Country: <br><input type="text" name="event_country"><br><br>
-      Event Date: <br><input type="date" name="event_date_value"><br><br>
-      Event Time: <br><input type="time" name="event_time_value"><br><br>
+                  </select><br>
+      <p>Event Street: </p><input type="text" name="event_street"><br>
+      <p>Event City: </p><input type="text" name="event_city"><br>
+      <p>Event State: </p><input type="text" name="event_state"><br>
+      <p>Event Zip Code: </p><input type="text" name="event_zip_code"><br>
+      <p>Event Country: </p><input type="text" name="event_country"><br>
+      <p>Event Date: </p><input type="date" name="event_date_value"><br>
+      <p>Event Time: </p><input type="time" name="event_time_value"><br>
     <input type="submit" value="Submit" class='event-submission' id='new-event-submission'>
   </form>
 </div>
