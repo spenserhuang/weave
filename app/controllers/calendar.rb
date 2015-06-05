@@ -122,3 +122,4 @@ get '/calendars/:id' do
   @single_day = Calendar.where(id: params[:id])
   erb :'/calendars/day_view'
 end
+

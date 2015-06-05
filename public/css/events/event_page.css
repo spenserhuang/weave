@@ -1,0 +1,55 @@
+.menu-items {
+  display: none;
+}
+
+.event-page-title {
+  margin-top: 8%;
+  margin-bottom: 5%;
+  font-size: 2.5em;
+  font-weight: 400;
+  text-align: left;
+}
+
+#event-information {
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: 1.3em;
+  line-height: 150%;
+}
+
+#google-maps-api {
+  float: right;
+}
+
+#google-maps-api-iframe {
+  height: 450px;
+  width: 450px;
+}
+
+.manage-event {
+  margin-top: 15%;
+}
+
+a button{
+  text-decoration: none;
+  color: #0F0F3D;
+}
+
+#edit-event {
+  font-size: 1em;
+  float: left;
+  height: 60px;
+  width: 145px;
+  margin-right: 4%;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+#delete-event {
+  font-size: 1em;
+  float: left;
+  height: 60px;
+  width: 145px;
+  background-color: transparent;
+  border-radius: 5px;
+}

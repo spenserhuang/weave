@@ -4,7 +4,7 @@
       <div class="year-view">
         <ul>
           <% @year_calendar.each do |calendar| %>
-             <a href="/calendars/<%=calendar.id%>" class="link-to-day" id="day-href"><li><%= calendar.date_value %></li></a>
+            <div class="link-to-day"><a href="/calendars/<%=calendar.id%>" class="link-to-day" id="day-href"><li><%= calendar.date_value %></li></a></div>
             <% event_presence = false %>
             <% current_user.events.each do |event| %>
               <% if event.event_date_value == calendar.date_value %>

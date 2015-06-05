@@ -1,4 +1,53 @@
-body {
+/*-------------------------------------------------------------------*/
+/* ALL FILES */
+/*-------------------------------------------------------------------*/
+
+html {
   background-image: url("images/cubes.png");
   font-family: "Roboto", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+/*-------------------------------------------------------------------*/
+/* HEADERS */
+/*-------------------------------------------------------------------*/
+
+#logo {
+  float: left;
+  margin-top: 0px;
+  margin-left: 30px;
+}
+
+#logo img {
+  width: 65px;
+  height: 65px;
+}
+
+.header-buttons {
+  background-color: transparent;
+  border-style: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 1.3em;
+  margin-top: 0px;
+  float: right;
+  margin-left: 0.5%;
+  width: 7%;
+  height: 50px;
+  color: #0F0F3D;
+}
+
+#sign-out {
+  margin-right: 25px;
+}
+
+#page-title {
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+  margin-left: 37%;
+  margin-right: 37%;
+  font-weight: 100;
+  font-size: 5.5em;
+  color: #0F0F3D;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }

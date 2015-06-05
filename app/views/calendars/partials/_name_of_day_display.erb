@@ -1,6 +1,6 @@
 <% month_calendar.each do |calendar| %>
   <% if calendar.name_of_day == day_name %>
-    <a href="/calendars/<%=calendar.id%>" class="link-to-day" id="day-href"><li><%= calendar.day_of_month %></li></a>
+    <div class="link-to-day"><a href="/calendars/<%=calendar.id%>" class="link-to-day" id="day-href"><li><%= calendar.day_of_month %></li></a></div>
     <% event_presence = false %>
     <% current_user.events.each do |event| %>
       <% if event.event_date_value == calendar.date_value %>
