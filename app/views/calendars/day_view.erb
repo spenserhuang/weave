@@ -1,0 +1,17 @@
+<body>
+  <div class="wrapper-div">
+    <div class="main-display">
+      <div class="single-day-view">
+        <% @single_day.each do |calendar| %>
+          <h3 id="single-day-name"><%= calendar.name_of_day %></h5>
+          <h5 id="single-day-title"><%= calendar.date_value %></h5>
+          <% current_user.events.each do |event| %>
+            <% if event.event_date_value == calendar.date_value %>
+              <a href="/events/<%=event.id%>" class="day-events"><p><%= event.title %></p></a>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</body>

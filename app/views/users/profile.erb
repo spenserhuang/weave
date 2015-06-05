@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/css/users/profile.css">
+
+<div id="user-profile-page">
+  <h3 id="welcome-message">Welcome, <%=current_user.first_name%> <%=current_user.last_name%></h3>
+
+  <div id="user-information">
+    <p>Username: <%=current_user.username%></p>
+    <p>First Name: <%=current_user.first_name%></p>
+    <p>Last Name: <%=current_user.last_name%></p>
+    <p>Email: <%=current_user.email%></p>
+    <p>Phone Number: <%=current_user.phone_number%></p>
+  </div>
+
+  <a href="/users/profile/edit"><button id="edit-user-profile">Edit Profile</button></a>
+</div>

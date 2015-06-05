@@ -1,0 +1,13 @@
+<h3>Edit your profile</h3>
+
+<form action="/users/profile" method="post" class="edit" id="user-profile-edit-form">
+  <div>Enter Username Here: <br><input type="text" name="user[username]" value="<%=current_user.username %>"></div><br>
+  <div>Enter Password Here: <br><input type="password" name="user[password]" value="<%=current_user.password_digest %>"></div><br>
+  <div>Confirm Password Here: <br><input type="password" name="user[password_confirmation]"value="<%=current_user.password_digest %>"></div><br>
+  <div>Enter First Name Here: <br><input type="text" name="user[first_name]" value="<%=current_user.first_name %>"></div><br>
+  <div>Enter Last Name Here: <br><input type="text" name="user[last_name]" value="<%=current_user.last_name %>"></div><br>
+  <div>Enter Email Here: <br><input type="text" name="user[email]" value="<%=current_user.email %>"></div><br>
+  <div>Enter Phone Number Here: <br><input type="text" name="user[phone_number]" value="<%=current_user.phone_number %>"></div><br>
+  <div><input type="hidden" name="_method" value="put"></div>
+  <div><input type="submit" class="edit-submission" id="user-profile-edit-submission"></div>
+</form>

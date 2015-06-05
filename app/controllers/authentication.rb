@@ -1,5 +1,5 @@
 get '/sign_up/new' do
-  erb :'authentication/sign_up'
+  erb :'/authentication/sign_up'
 end
 
 post '/sign_up' do
@@ -28,7 +28,7 @@ end
 
 get '/sign_out' do
   session[:user_id] = nil
-  redirect '/'
+  erb :'/authentication/sign_out'
 end
 
 get '/auth/twitter/callback' do

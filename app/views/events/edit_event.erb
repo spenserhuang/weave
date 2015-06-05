@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/css/events/event_modification.css">
+
+<div id="separation"></div>
+
+<h2 class='update-event-header'>Update Event</h2>
+
+<div id="update-event-div">
+  <form action="/events/<%=@edit_event.id%>" method="post" class='update-event' id='update-event-submission-form'>
+      Event Title: <br><input type="text" name="title" value="<%=@edit_event.title%>"><br><br>
+      Event Description: <br><textarea name="description"><%=@edit_event.description%></textarea><br><br>
+      <% if @edit_event.event_type == "Work" %>
+        Event Type: <br>
+        <select name="event_type">
+          <option></option>
+          <option value="Work" selected>Work</option>
+          <option value="Social">Social</option>
+        </select><br><br>
+      <% elsif @edit_event.event_type == "Social" %>
+        Event Type: <br>
+        <select name="event_type">
+          <option></option>
+          <option value="Work" >Work</option>
+          <option value="Social" selected>Social</option>
+        </select><br><br>
+      <% else %>
+        Event Type: <br>
+        <select name="event_type">
+          <option selected></option>
+          <option value="Work" selected>Work</option>
+          <option value="Social">Social</option>
+        </select><br><br>
+      <% end %>
+      Event Street: <br><input type="text" name="event_street" value="<%=@edit_event.event_street%>"><br><br>
+      Event City: <br><input type="text" name="event_city" value="<%=@edit_event.event_city%>"><br><br>
+      Event State: <br><input type="text" name="event_state" value="<%=@edit_event.event_state%>"><br><br>
+      Event Zip Code: <br><input type="text" name="event_zip_code" value="<%=@edit_event.event_zip_code%>"><br><br>
+      Event Country: <br><input type="text" name="event_country" value="<%=@edit_event.event_country%>"><br><br>
+      Event Date: <br><input type="date" name="event_date_value" value="<%= Date.strptime("#{@edit_event.event_date_value.to_s}", "%m/%d/%Y") %>"><br><br>
+      Event Time: <br><input type="time" name="event_time_value" value="<%= @edit_event.event_time_value.to_s.split(' ')[1] %>"><br><br>
+      <input type="hidden" name="_method" value="put">
+    <input type="submit" value="Submit" class='event-update' id='update-event-submission'>
+  </form>
+</div>
