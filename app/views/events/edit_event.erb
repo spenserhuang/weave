@@ -2,9 +2,8 @@
 
 <div id="separation"></div>
 
-<h2 class='update-event-header'>Update Event</h2>
-
-<div id="update-event-div">
+<div id="modify-event-div">
+  <h2 class='update-event-header'>Update Event</h2>
   <form action="/events/<%=@edit_event.id%>" method="post" class='update-event' id='update-event-submission-form'>
       Event Title: <br><input type="text" name="title" value="<%=@edit_event.title%>"><br><br>
       Event Description: <br><textarea name="description"><%=@edit_event.description%></textarea><br><br>

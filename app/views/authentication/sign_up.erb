@@ -5,18 +5,21 @@
   <h5 id="index-page-subtitle">Interweaving your social and productive lives</h5>
 </div>
 
-<a href='/auth/twitter'><button id="twitter-sign-in">Sign in with Twitter</button></a>
+<div id="traditional-sign-up">
+  <form action = "/sign_up" method = "POST" class="authentication" id="sign-up-form">
+    <h3>Sign Up</h3>
+    <div>Enter Username: <br><input type="text" name="user[username]"></div><br>
+    <div>Enter Password: <br><input type="password" name="user[password]"></div><br>
+    <div>Confirm Password: <br><input type="password" name="user[password_confirmation]"></div><br>
+    <div>Enter First Name: <br><input type="text" name="user[first_name]"></div><br>
+    <div>Enter Last Name: <br><input type="text" name="user[last_name]"></div><br>
+    <div>Enter Email: <br><input type="text" name="user[email]"></div><br>
+    <div>Enter Phone Number: <br><input type="text" name="user[phone_number]"></div><br>
+    <input type="submit" class="authentication-submission" id="sign-up-submission">
+  </form>
+</div>
 
-<a href='/auth/facebook'><button id="facebook-sign-in">Sign in with Facebook</button></a>
-
-<form action = "/sign_up" method = "POST" class="authentication" id="sign-up-form">
-  <div>Enter Username: <br><input type="text" name="user[username]"></div><br>
-  <div>Enter Password: <br><input type="password" name="user[password]"></div><br>
-  <div>Confirm Password: <br><input type="password" name="user[password_confirmation]"></div><br>
-  <div>Enter First Name: <br><input type="text" name="user[first_name]"></div><br>
-  <div>Enter Last Name: <br><input type="text" name="user[last_name]"></div><br>
-  <div>Enter Email: <br><input type="text" name="user[email]"></div><br>
-  <div>Enter Phone Number: <br><input type="text" name="user[phone_number]"></div><br>
-  <input type="submit" class="authentication-submission" id="sign-up-submission">
-</form>
-
+<div id="oauth-sign-up">
+  <a href='/auth/twitter'><img src="/images/twitter.png"></a>
+  <a href='/auth/facebook'><img src="/images/facebook.png"></a>
+</div>
