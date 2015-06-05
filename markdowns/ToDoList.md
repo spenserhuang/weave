@@ -4,28 +4,30 @@ To Do List
   x Prefilled Forms
   x Validations
 
-    Day href
+  x Day href
   x Seed holidays
   x Add event types
-    Event bar
-    Sign in and sign up JQuery and AJAX
-    Redesign wireframes
+  x Event bar
+  x Redesign wireframes
 
 
 06/04/2015
     Reminders
-    Fix Google Maps API
-    Implement logo
-    Change text colors
+  x Fix Google Maps API
+  x Implement logo
+  x Change text colors
     Year display
-    HTML CSS
+  x HTML CSS
     Implement Time Bars
     To Do List
     Search Bar
 
 
 06/05/2015
-
+    Sign in and Sign up Hiding
+    5 Day View CSS
+    Event Bar Conditionals
+    Extra Special Sauce
 
 APIs
   x Google Maps
@@ -37,8 +39,8 @@ APIs
 
 Bonus
   x Password Digest
-    Partials Refactor
-    Refactor All
+  x Partials Refactor
+  x Refactor All
   x Prefilled Date and Time
 
 

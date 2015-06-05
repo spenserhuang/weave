@@ -1,7 +1,19 @@
+<link rel="stylesheet" href="/css/authentication/sign_in.css">
+
+<div class="index-page-filler">&nbsp;
+  <h1 id="index-page-title">WEAVE</h1>
+  <h5 id="index-page-subtitle">Interweaving your social and productive lives</h5>
+</div>
+
+<a href='/auth/twitter'><button id="twitter-sign-in">Sign in with Twitter</button></a>
+
+<a href='/auth/facebook'><button id="facebook-sign-in">Sign in with Facebook</button></a>
+
 <div>
   <form action="/sign_in" method="POST" class="authentication" id="sign-in-form">
-    <p><input type="text" name="user[username]" placeholder="Enter Username Here"></p>
-    <p><input type="password" name="user[password]" placeholder="Enter Password Here"></p>
+    <p><input type="text" name="user[username]" placeholder="Enter Username"></p>
+    <p><input type="password" name="user[password]" placeholder="Enter Password"></p>
     <input type="submit" class="authentication-submission" id="sign-in-submission">
   </form>
 </div>
+

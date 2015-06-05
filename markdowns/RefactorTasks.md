@@ -8,6 +8,6 @@ Refactor List
   x Seed File
   x User Authentication
 
-    Controllers
-    Views
-    CSS
+  x Controllers
+  x Views
+  x CSS

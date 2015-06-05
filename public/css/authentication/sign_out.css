@@ -1,0 +1,14 @@
+.layout-header {
+  display: none;
+}
+
+.menu-items {
+  display: none;
+}
+
+#sign_out_message {
+  text-align: center;
+  color: black;
+  margin-top: 10%;
+  font-size: 1.5em;
+}
