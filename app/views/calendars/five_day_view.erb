@@ -1,0 +1,33 @@
+<body>
+  <div class="wrapper-div">
+    <div class="main-display">
+      <div class="five-day-view">
+        <% @five_day_list.each do |calendar| %>
+          <div class="day">
+            <% if calendar.name_of_day == "Monday" %>
+              <h5 class="five-day-name-of-day">Mon</h5>
+            <% elsif calendar.name_of_day == "Tuesday" %>
+              <h5 class="five-day-name-of-day">Tue</h5>
+            <% elsif calendar.name_of_day == "Wednesday" %>
+              <h5 class="five-day-name-of-day">Wed</h5>
+            <% elsif calendar.name_of_day == "Thursday" %>
+              <h5 class="five-day-name-of-day">Thu</h5>
+            <% elsif calendar.name_of_day == "Friday" %>
+              <h5 class="five-day-name-of-day">Fri</h5>
+            <% elsif calendar.name_of_day == "Saturday" %>
+              <h5 class="five-day-name-of-day">Sat</h5>
+            <% elsif calendar.name_of_day == "Sunday" %>
+              <h5 class="five-day-name-of-day">Sun</h5>
+            <% end %>
+            <p id="five-day-date-values" ><%= calendar.date_value %></p>
+            <% current_user.events.each do |event| %>
+              <% if event.event_date_value == calendar.date_value %>
+                Event: <a href="/events/<%=event.id%>"><%= event.title %></a>
+              <% end %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</body>

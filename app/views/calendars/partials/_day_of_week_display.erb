@@ -1,0 +1,9 @@
+<div class="day-of-week">
+  <h5 class="week-name-of-day"><%= day_of_week_initials %></h5>
+  <p class="week-date-value"> <%= week_calendar_date.date_value %></p>
+  <% current_user.events.each do |event| %>
+    <% if event.event_date_value == week_calendar_date.date_value %>
+      <a href="/events/<%=event.id%>" class="week-links"><%= event.title %></a>
+    <% end %>
+  <% end %>
+</div>

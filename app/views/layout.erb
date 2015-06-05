@@ -1,32 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!--
-    normalize.css removes cross-browser differences in defaults, e.g.,
-    differences in how form elements appear between Firefox and IE
-    See: http://necolas.github.com/normalize.css/
-  -->
-  <link rel="stylesheet" href="/css/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
-  <link rel="stylesheet" href="/css/application.css">
+  <head>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/js/application.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:500,900italic,900,400italic,100,700italic,300,700,500italic,100italic,300italic,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/application.css">
 
-  <title></title>
-</head>
-<body>
-  <header>
-    <% if current_user %>
-      <p>Welcome, <%= current_user.username %></p>
-      <a href='/sign_out'><button>Sign Out</button></a>
-    <% else %>
-      <a href='/sign_up/new'><button>Sign Up</button></a>
-      <a href='/sign_in/new'><button>Sign In</button></a>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/js/application.js"></script>
+
+    <title>Home</title>
+  </head>
+  <header class="layout-header">
+    <%if current_user%>
+
+      <div class="top-bar">
+        <div id="logo">織</div>
+        <a href="/sign_out"><button class="header-buttons" id="sign-out">Sign Out</button></a>
+        <a href="/users/profile"><button class="header-buttons" id="user-profile">Profile</button></a>
+        <a href="/calendars/home"><button class="header-buttons" id="home">Home</button></a>
+      <div>
+
+      <h1>Weave</h1>
+
+      <div class="menu-items">
+        <div id="date-selector">
+          <form action='/calendars/choose_date' method='post' class='text-bar'>
+            <input type='date' name='event_date_value'>
+            <input type="submit" value="Submit" id='submit-button'>
+          </form>
+        </div>
+
+        <div id="view-selector">
+          <select id="view-menu">
+            <option value="/home">Select View</option>
+            <option value="current_day">Today</option>
+            <option value="current_week">Current Week</option>
+            <option value="five_day">Current 5 Day</option>
+            <option value="current_month">Current Month</option>
+            <option value="current_year">Current Year</option>
+            <option value="chosen_day">Chosen Day</option>
+            <option value="chosen_week">Chosen Week</option>
+            <option value="chosen_five_day">Chosen 5 Day</option>
+            <option value="chosen_month">Chosen Month</option>
+            <option value="chosen_year">Chosen Year</option>
+          </select>
+        </div>
+
+        <a href="/events/new"><button id="new-event">+ New Event</button></a>
+
+      </div>
     <% end %>
   </header>
-  <%= yield %>
-</body>
+  <body>
+    <%= yield %>
+  </body>
 </html>

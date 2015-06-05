@@ -1,1 +1,74 @@
-<h1>Home</h1>
+<body>
+  <div class="wrapper-div">
+    <div class="main-display">
+      <div class="month-view">
+        <div class="name-of-day">
+          <ul>
+          <h5>Mon</h5>
+            <% if @start_of_month == "Sunday" || @start_of_month == "Saturday" || @start_of_month == "Friday" || @start_of_month == "Thursday" || @start_of_month == "Wednesday" || @start_of_month == "Tuesday" %>
+              <li>&nbsp;</li>
+            <% end %>
+            <%= erb :'/calendars/partials/_name_of_day_display', locals: { month_calendar: @month_calendar, day_name: "Monday" } %>
+          </ul>
+        </div>
+
+        <div class="name-of-day">
+          <ul>
+            <h5>Tue</h5>
+            <% if @start_of_month == "Sunday" || @start_of_month == "Saturday" || @start_of_month == "Friday" || @start_of_month == "Thursday" || @start_of_month == "Wednesday" %>
+              <li>&nbsp;</li>
+            <% end %>
+            <%= erb :'/calendars/partials/_name_of_day_display', locals: { month_calendar: @month_calendar, day_name: "Tuesday" } %>
+          </ul>
+        </div>
+
+        <div class="name-of-day">
+          <ul>
+          <h5>Wed</h5>
+            <% if @start_of_month == "Sunday" || @start_of_month == "Saturday" || @start_of_month == "Friday" || @start_of_month == "Thursday"%>
+              <li>&nbsp;</li>
+            <% end %>
+            <%= erb :'/calendars/partials/_name_of_day_display', locals: { month_calendar: @month_calendar, day_name: "Wednesday" } %>
+          </ul>
+        </div>
+
+        <div class="name-of-day">
+          <ul>
+          <h5>Thu</h5>
+            <% if @start_of_month == "Sunday" || @start_of_month == "Saturday" || @start_of_month == "Friday"%>
+              <li>&nbsp;</li>
+            <% end %>
+            <%= erb :'/calendars/partials/_name_of_day_display', locals: { month_calendar: @month_calendar, day_name: "Thursday" } %>
+          </ul>
+        </div>
+
+        <div class="name-of-day">
+          <ul>
+          <h5>Fri</h5>
+            <% if @start_of_month == "Sunday" || @start_of_month == "Saturday" %>
+              <li>&nbsp;</li>
+            <% end %>
+            <%= erb :'/calendars/partials/_name_of_day_display', locals: { month_calendar: @month_calendar, day_name: "Friday" } %>
+          </ul>
+        </div>
+
+        <div class="name-of-day">
+          <ul>
+          <h5>Sat</h5>
+            <% if @start_of_month == "Sunday" %>
+              <li>&nbsp;</li>
+            <% end %>
+            <%= erb :'/calendars/partials/_name_of_day_display', locals: { month_calendar: @month_calendar, day_name: "Saturday" } %>
+          </ul>
+        </div>
+
+        <div class="name-of-day">
+          <ul>
+          <h5>Sun</h5>
+            <%= erb :'/calendars/partials/_name_of_day_display', locals: { month_calendar: @month_calendar, day_name: "Sunday" } %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

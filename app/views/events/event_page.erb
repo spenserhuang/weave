@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/css/events/event_page.css">
+
+<body>
+  <h2 class="event-title">
+    Event Title: <%= @event.title %>
+  </h2>
+
+  <div class="event-details">
+    <p>Event Description: <%= @event.description %></p>
+    <p>Event Type: <%= @event.event_type %></p>
+    <p>Event Location: <%= @event_location %></p>
+    <p>Event Date: <%= @event.event_date_value%></p>
+    <p>Event Time: <%= @event.event_time_value.to_s.split(' ')[1] %></p>
+  </div>
+
+  <% if @event.event_type != "Holiday" && @event.event_type != "Celebration" %>
+    <p class="edit"><a href="/events/<%= @event.id %>/edit">Edit the event</a></p>
+
+    <iframe
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key=<%=ENV['GOOGLE_API_KEY']%>&q=<%=@event_location%>">>
+    </iframe>
+  <% end %>
+
+  <br>
+
+  <iframe
+    src="https://platform.twitter.com/widgets/tweet_button.html?size=1&via=huangspenser&text=<%=@event.title%>&count=none&hashtags=events%2C<%=@event.title%>"
+    width="140"
+    height="28"
+    title="Twitter Tweet Button"
+    data-size="large"
+    style="border: 0;">
+  </iframe>
+
+  <br>
+
+    <div class="delete-event" id="event-deletion">
+    <p>Delete this Event</p>
+    <form action="/events/<%=@event.id%>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Delete">
+    </form>
+  </div>
+
+</body>

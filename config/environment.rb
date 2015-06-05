@@ -20,7 +20,7 @@ require "sinatra/reloader" if development?
 
 require 'erb'
 
-require 'date'
+require 'Date'
 
 require 'omniauth-twitter'
 require 'omniauth-facebook'
